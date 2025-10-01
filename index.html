@@ -3,51 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Portfolio | Software Engineer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Hi, I'm Satwik Kapoor</h1>
-    <p>Aspiring Software Engineer/Developer</p>
-  </header>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">MyPortfolio</div>
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><button class="toggle-btn" id="themeToggle">🌙 Dark</button></li>
     </ul>
   </nav>
 
+  <!-- Home -->
+  <section id="home">
+    <h1>Hi, I'm Satwik 👋</h1>
+    <p class="typing"><span id="typing-text"></span></p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
   <!-- About -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>Short intro about yourself, skills, and goals.</p>
+    <img src="https://via.placeholder.com/400" alt="Profile picture">
+    <div>
+      <h2>About Me</h2>
+      <p>
+        Passionate software engineer who specialises in problem solving 
+        challenging problems, and crafting clean code. With experience in 
+        variopus kinds of software development, I love turning ideas into functional products and
+        finding solutions to complicated problems.
+      </p>
+    </div>
   </section>
 
   <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Title</h3>
-      <p>Description of your project.</p>
-      <a href="#">View Project</a>
+    <div class="cards">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>Android fitness and nutrition tracking mobile application developed using Kotlin and XML.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Group project - Client tailored multi-page website storage system.</p>
+      </div>
+      <div class="card">
+        <h3>Project Three</h3>
+        <p>Portfolio website made using HTML CSS and JavaScript, with the assistance of AI.</p>
+      </div>
     </div>
   </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+
+     <!-- Legend -->
+    <div id="skills-legend">
+      <p><span class="legend-box web"></span> Web Development</p>
+      <p><span class="legend-box mobile"></span> Mobile Development</p>
+      <p><span class="legend-box data"></span> Data & Backend</p>
+      <p><span class="legend-box general"></span> General Languages / Other</p>
+    </div>
+    
+    <div class="skill-bar">
+      <span>HTML</span>
+      <div class="bar"><div class="bar-fill" data-skill="90%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>CSS</span>
+      <div class="bar"><div class="bar-fill" data-skill="85%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>JavaScript</span>
+      <div class="bar"><div class="bar-fill" data-skill="80%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>React</span>
+      <div class="bar"><div class="bar-fill" data-skill="75%"></div></div>
+    </div>
+</section>
 
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: skkapoor2410@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/kam3ren">github.com/kam3ren</a></p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Satwik Kapoor</p>
+    <p>© 2025 Satwik Kapoor - Built with HTML, CSS, and JavaScript</p>
   </footer>
 
   <script src="script.js"></script>
