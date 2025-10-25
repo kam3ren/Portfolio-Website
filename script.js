@@ -139,6 +139,24 @@ document.querySelectorAll("nav a").forEach(link => {
   });
 });
 
+// Smooth scroll for "View My Work" button
+const viewWorkBtn = document.querySelector('.btn[href="#projects"]');
+if (viewWorkBtn) {
+  viewWorkBtn.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector('#projects');
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    // Add a click animation pulse
+    viewWorkBtn.classList.add('clicked');
+    setTimeout(() => viewWorkBtn.classList.remove('clicked'), 500);
+  });
+}
+
+
 // ===============================
 // TYPING EFFECT
 // ===============================

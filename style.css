@@ -107,21 +107,90 @@ body.light .toggle-btn:hover {
 .btn:hover {
   background: #1f6feb;
 }
+/* Smooth scroll behavior for entire page */
+html {
+  scroll-behavior: smooth;
+}
 
-/* ===== About ===== */
+/* Button Click Animation */
+.btn.clicked {
+  transform: scale(0.96);
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* ===== About Section (Light/Dark Adaptive) ===== */
 #about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 10%;
+}
+
+.about-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 50px;
   align-items: center;
 }
+
 #about img {
   width: 100%;
   border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s ease;
 }
+
+.about-text h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--heading-color);
+}
+
 #about p {
-  opacity: 0.8;
+  margin-bottom: 1.2em;
+  line-height: 1.7;
+  color: var(--text-color);
 }
+
+/* Strong text styling for emphasis */
+#about strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Theme variables for dark mode */
+:root {
+  --heading-color: #fff;
+  --text-color: #b1bac4;
+  --accent-color: #58a6ff;
+}
+
+/* Light mode adjustments */
+body.light {
+  --heading-color: #111;
+  --text-color: #444;
+  --accent-color: #1f6feb;
+}
+
+body.light #about img {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  #about img {
+    width: 80%;
+    margin: 0 auto 30px;
+  }
+}
+
+
 
 /* ===== Projects ===== */
 #projects .cards {
